@@ -51,3 +51,18 @@ function playRound(humanChoice, computerChoice) {
     console.log("It's a tie.");
   }
 }
+
+function playGame() {
+  for (let i = 0; i < 5; i++) {
+    playRound(getHumanChoice(), getComputerChoice());
+  }
+  if (humanScore > computerScore) {
+    console.log("Congrats, you've won!");
+  } else if (humanScore < computerScore) {
+    console.log("The computer has won ):");
+  } else {
+    console.log("It's a tie ._.");
+  }
+  humanScore = 0;
+  computerScore = 0;
+}

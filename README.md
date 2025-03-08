@@ -17,3 +17,9 @@
 - a function that evaluates both human choice and computer choice
 - if human choice is rock and computer choice scissors, log a message and increase score
 - repeat previous steps for paper and scissors and then again for computer choice.
+
+### pseudocode for playing 5 rounds each run
+
+- write a loop that calls playRound function 5 time
+- compare the score at the end and declare a winner
+- reset the scores
