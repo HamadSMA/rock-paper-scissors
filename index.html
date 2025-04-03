@@ -1,10 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
+
+    <style>
+      body {
+        font-family: "Pixelify Sans", sans-serif;
+      }
+      .container {
+        position: relative;
+        height: 100vh;
+      }
+      .wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        left: 50%;
+        width: 700px;
+      }
+
+      .result-wrapper {
+        display: flex;
+        gap: 30px;
+        font-size: 30px;
+        margin-bottom: 30px;
+        justify-content: center;
+      }
+
+      .result {
+        border: 5px double black;
+        padding: 20px 40px;
+        width: 70px;
+      }
+
+      .tags {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        font-weight: 600;
+      }
+
+      .score {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .score-name {
+        font-size: 30px;
+        margin-bottom: 40px;
+      }
+
+      .msg {
+        border: 5px double black;
+        max-width: 700px;
+        margin-bottom: 50px;
+      }
+      button {
+        font-family: "Pixelify Sans", sans-serif;
+
+        font-size: 14px;
+        height: 40px;
+        width: 100px;
+        background-color: #000000;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        box-shadow: 12px 10px 15px 0px #efefef;
+      }
+      button:hover {
+        background-color: #ededed;
+        color: black;
+        border: 5px double #000000;
+      }
+
+      button:active {
+        box-shadow: none;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="score">
+          <div class="score-name"><p>Player score: 0</p></div>
+          <div class="score-name"><p>Computer score: 0</p></div>
+        </div>
+        <div class="msg">
+          <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class="tags">
+          <p class="tag-name">PLAYER</p>
+          <p class="tag-name">COMPUTER</p>
+        </div>
+        <div class="result-wrapper">
+          <div class="result"><p>?</p></div>
+          <div class="result"><p>?</p></div>
+        </div>
+        <div class="button-wrapper">
+          <button class="rock">Rock</button>
+          <button class="paper">Paper</button>
+          <button class="scissors">Scissors</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
