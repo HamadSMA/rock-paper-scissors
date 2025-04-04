@@ -30,10 +30,10 @@
 
       .result-wrapper {
         display: flex;
+        justify-content: space-evenly;
         gap: 30px;
         font-size: 30px;
         margin-bottom: 30px;
-        justify-content: center;
       }
 
       .result {
@@ -59,10 +59,18 @@
         margin-bottom: 40px;
       }
 
-      .msg {
+      .msg-wrapper {
         border: 5px double black;
         max-width: 700px;
         margin-bottom: 50px;
+      }
+
+      .msg {
+        font-weight: 500;
+      }
+
+      .roll {
+        width: 200px;
       }
       button {
         font-family: "Pixelify Sans", sans-serif;
@@ -91,19 +99,27 @@
     <div class="container">
       <div class="wrapper">
         <div class="score">
-          <div class="score-name"><p>Player score: 0</p></div>
-          <div class="score-name"><p>Computer score: 0</p></div>
+          <div class="score-name">
+            <span>Player score: </span>
+            <span class="player-score"></span>
+          </div>
+          <div class="score-name">
+            <span>Computer score: </span>
+            <span class="computer-score"></span>
+          </div>
         </div>
-        <div class="msg">
-          <h1>Rock Paper Scissors</h1>
+        <div class="msg-wrapper">
+          <h1 class="msg">Rock Paper Scissors</h1>
         </div>
         <div class="tags">
           <p class="tag-name">PLAYER</p>
           <p class="tag-name">COMPUTER</p>
         </div>
         <div class="result-wrapper">
-          <div class="result"><p>?</p></div>
-          <div class="result"><p>?</p></div>
+          <div class="roll"><p class="player-roll">?</p></div>
+          <div class="result player-point"><p></p></div>
+          <div class="result computer-point"><p></p></div>
+          <div class="roll"><p class="computer-roll">?</p></div>
         </div>
         <div class="button-wrapper">
           <button class="rock">Rock</button>
